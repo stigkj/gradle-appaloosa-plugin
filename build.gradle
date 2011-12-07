@@ -16,7 +16,16 @@ repositories {
 
 dependencies {
     compile gradleApi()
-    groovy "org.codehaus.groovy:groovy-all:1.8.4"
+
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.8.3'
+    compile 'org.apache.httpcomponents:httpclient:4.1.2'
+    compile 'org.apache.httpcomponents:httpmime:4.1.2'
+    compile 'commons-io:commons-io:2.0.1'
+
+    testCompile 'com.harlap:mock-http-server:1.0.1'
+    testCompile 'org.spockframework:spock-core:0.5-groovy-1.8'
+
+    groovy 'org.codehaus.groovy:groovy-all:1.8.4'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
