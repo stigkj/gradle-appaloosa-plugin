@@ -1,6 +1,6 @@
 # Appaloosa plugin for Gradle
 
-The Appaloosa plugin deploys Android applications to [Appaloosa](http://appaloosa-store.com)
+The Appaloosa Gradle plugin deploys Android applications to [Appaloosa](http://appaloosa-store.com)
 
 ## Usage
 To use the plugin, include the following in your build script:
