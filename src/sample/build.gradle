@@ -1,0 +1,23 @@
+import org.apache.ivy.plugins.resolver.URLResolver
+
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+project.convention.plugins.android {
+    andsroidManifest = file('src/main/resources/AndroidManifest.xml')
+}
+
+buildscript {
+    repositories {
+        add(new URLResolver()) {
+            name = 'GitHub'
+            addArtifactPattern 'http://cloud.github.com/downloads/[organisation]/[module]/[module]-[revision].[ext]'
+        }
+    }
+    dependencies {
+        classpath 'stianh:gradle-android-plugin:1.1.0-SNAPSHOT'
+    }
+}
